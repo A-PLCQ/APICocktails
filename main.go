@@ -1,11 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
 )
 
-const port = "8082"
+const port = "8080"
 const url = "localhost"
 
 func Index(w http.ResponseWriter, r *http.Request) {
@@ -14,5 +15,6 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", Index)
+	fmt.Println("(http://"+url+":"+port+") - Server started on port", port)
 	http.ListenAndServe(url+":"+port, nil)
 }
