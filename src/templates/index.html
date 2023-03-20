@@ -6,31 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>le bar</title>
-    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="/src/assets/css/styles.css">
 </head>
 
+
+
 <body>
-    <section class="pose">
-        <div>
-            <input required="" type="text" class="input" id="cocktailInput" name="cocktail">
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>le coktaile</label>
-            <button type="submit">Rechercher</button>
+    <header>
+        <h1>cocktail tips </h1>
+        <h2>pour vous aider à trouver le cocktail parfait</h2>
+    </header>
+    <section class="container">
+    <div class="box">
+        <span class="inputbox">
+            <input required="required" type="text">
+            <span>un cocktail ?</span>
+            <i></i>
+        </span>
+        <div id="result-cocktail">
+            <img src="" alt="">
+            <h2>{myDrink.strDrink}</h2>
+            <h3>Ingredients:</h3>
+            <ul class="ingredients"></ul>
+            <h3>Instructions:</h3>
+            <p>${myDrink.strInstructions}</p>
         </div>
-    </section>
-    <section>
+
+    </div>
+    <div class="box">
+        <span class="inputbox">
+            <input required="required" type="text">
+            <span>une idée d'ingrédients</span>
+            <i></i>
+        </span>
+        <div id="result"></div>
         
+    </div>
+
     </section>
 </body>
 
-{{ range .Items }}
-{{ .Name }}
-{{ end }}
+
 </html>
-
-
-
-
-
-

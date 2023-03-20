@@ -1,0 +1,242 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a
+{
+	text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* Path: src\css\styles.css */
+
+body
+{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    background-image: url(/src/assets/css/styles.css);
+    background-repeat: no-repeat;
+    background-position: center;
+} 
+
+header
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 1em 2em;
+	color: #fefefe;
+	gap: 5px;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(0.5em);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1
+{
+	font-size: 1.5em;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+}
+
+header h2
+{
+	font-size: 0.8em;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+}
+
+.container
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	gap: 80px;
+	flex-wrap: wrap;
+	
+}
+
+.box
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	width: 90vw;
+	max-width: 37.5em;
+	backdrop-filter: blur(0.5em);
+	border : 1px solid #333;
+	padding: 1.8em;
+	border-radius: 0.6em;
+	box-shadow: 0 1em 3em rgba(2, 9, 38, 0.25);
+}
+
+.inputbox {
+	position: relative;
+	width: 196px;
+}
+
+.inputbox input {
+	position: relative;
+	width: 100%;
+	padding: 20px 10px 10px;
+	background: transparent;
+	outline: none;
+	box-shadow: none;
+	border: none;
+	color: #23242a;
+	font-size: 1em;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+	z-index: 10;
+}
+
+.inputbox span {
+	position: absolute;
+	left: 0;
+	padding: 20px 10px 10px;
+	font-size: 1em;
+	color: #8f8f8f;
+	letter-spacing: 00.05em;
+	transition: 0.5s;
+	pointer-events: none;
+}
+
+.inputbox input:valid~span,
+.inputbox input:focus~span {
+	color: #45f3ff;
+	transform: translateX(-10px) translateY(-34px);
+	font-size: 0, 75em;
+}
+
+.inputbox i {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #45f3ff;
+	border-radius: 4px;
+	transition: 0.5s;
+	pointer-events: none;
+	z-index: 9;
+}
+
+.inputbox input:valid~i,
+.inputbox input:focus~i {
+	height: 44px;
+}
+
+#result-cocktail {
+	color: #575a7b;
+	line-height: 2em;
+}
+
+#result-cocktail img {
+	display: block;
+	max-width: 12.5em;
+	margin: auto;
+}
+
+#result-cocktail h2 {
+	font-size: 1.25em;
+	margin: 0.8em 0 1.6em 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	color: #1f194c;
+	position: relative;
+}
+
+#result h2:before {
+	content: "";
+	position: absolute;
+	width: 15%;
+	height: 3px;
+	background-color: #5372f0;
+	left: 42.5%;
+	bottom: -0.3em;
+}
+
+#result-cocktail h3 {
+	font-size: 1.1em;
+	font-weight: 600;
+	margin-bottom: 0.2em;
+	color: #1f194c;
+}
+
+#result ul {
+	margin-bottom: 1em;
+	margin-left: 1.8em;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+#result-cocktail li {
+	margin-bottom: 0.3em;
+}
+
+#result-cocktail p {
+	text-align: justify;
+	font-weight: 400;
+	font-size: 0.95em;
+}
+
+.msg {
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		font-size: 14px;
+	}
+}
